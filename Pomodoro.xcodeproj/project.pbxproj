@@ -409,6 +409,7 @@
 				B931AE921B7FEBB7004435D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B931AE931B7FEBB7004435D5 /* Build configuration list for PBXNativeTarget "PomodoroTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				B931AE951B7FEBB7004435D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
