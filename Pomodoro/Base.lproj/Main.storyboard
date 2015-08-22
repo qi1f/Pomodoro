@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pomodoro View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="PomodoroViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -49,10 +49,69 @@
                     <connections>
                         <outlet property="displayTimeLabel" destination="pUQ-Ky-dDI" id="MAP-HU-eSv"/>
                         <outlet property="startStopButtonImage" destination="UOP-F8-Kk3" id="uT8-Ku-2ck"/>
+                        <segue destination="dyA-sf-0uu" kind="show" identifier="toBreakView" id="1sX-ba-3Cq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="454" y="462"/>
+        </scene>
+        <!--Break View Controller-->
+        <scene sceneID="sZ9-fp-kjH">
+            <objects>
+                <viewController id="dyA-sf-0uu" customClass="BreakViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Hm-3l-mgx"/>
+                        <viewControllerLayoutGuide type="bottom" id="czJ-zZ-V5y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fjz-WU-0e2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vud-We-RCU">
+                                <rect key="frame" x="170" y="80" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="1dE-31-zUr"/>
+                                    <constraint firstAttribute="height" constant="260" id="PqD-hH-DMM"/>
+                                    <constraint firstAttribute="width" constant="260" id="pqD-Mr-D4F"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="260" id="ud4-Ua-MDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-Ja-t0S">
+                                <rect key="frame" x="270" y="370" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MHV-va-ZRY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Mcd-78-3sT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="U3t-O2-Dpb"/>
+                                    <constraint firstAttribute="width" constant="60" id="Wea-kM-cwJ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="startButton"/>
+                                <connections>
+                                    <action selector="startStopButton:" destination="dyA-sf-0uu" eventType="touchUpInside" id="TCH-Xu-Ugs"/>
+                                    <action selector="startStopButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nDh-x7-uiK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vud-We-RCU" firstAttribute="top" secondItem="0Hm-3l-mgx" secondAttribute="bottom" constant="60" id="OvZ-ef-9kq"/>
+                            <constraint firstAttribute="centerX" secondItem="vud-We-RCU" secondAttribute="centerX" id="Owt-53-nIh"/>
+                            <constraint firstItem="PFP-Ja-t0S" firstAttribute="top" secondItem="0Hm-3l-mgx" secondAttribute="bottom" constant="350" id="Vt8-h6-IZu"/>
+                            <constraint firstAttribute="centerX" secondItem="PFP-Ja-t0S" secondAttribute="centerX" id="hvk-iS-t4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayTimeLabel" destination="vud-We-RCU" id="63O-e6-chg"/>
+                        <outlet property="startStopButtonImage" destination="PFP-Ja-t0S" id="yR8-IW-0r2"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="toPomodoroView" id="Hnc-Rs-NX6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dx6-wU-2vN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="462"/>
         </scene>
     </scenes>
     <resources>
