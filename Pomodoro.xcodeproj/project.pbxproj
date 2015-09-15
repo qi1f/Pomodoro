@@ -13,7 +13,9 @@
 		B931AE7E1B7FEBB7004435D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B931AE7D1B7FEBB7004435D5 /* Images.xcassets */; };
 		B931AE811B7FEBB7004435D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B931AE7F1B7FEBB7004435D5 /* LaunchScreen.xib */; };
 		B931AE8D1B7FEBB7004435D5 /* PomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B931AE8C1B7FEBB7004435D5 /* PomodoroTests.swift */; };
+		B93A1AA81BA81417008E6DE6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93A1AA71BA81417008E6DE6 /* SettingViewController.swift */; };
 		B9B2397B1B9D020000F8B2DD /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2397A1B9D020000F8B2DD /* TasksViewController.swift */; };
+		B9B879461BA3879F00B2CEE0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B879451BA3879F00B2CEE0 /* TabBarViewController.swift */; };
 		B9BFF7B41B9BD50F0005951F /* TasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BFF7B31B9BD50F0005951F /* TasksList.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,9 @@
 		B931AE861B7FEBB7004435D5 /* PomodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B931AE8B1B7FEBB7004435D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B931AE8C1B7FEBB7004435D5 /* PomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTests.swift; sourceTree = "<group>"; };
+		B93A1AA71BA81417008E6DE6 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B9B2397A1B9D020000F8B2DD /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		B9B879451BA3879F00B2CEE0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B9BFF7B31B9BD50F0005951F /* TasksList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,8 @@
 				B931AE7A1B7FEBB7004435D5 /* Main.storyboard */,
 				B9B2397A1B9D020000F8B2DD /* TasksViewController.swift */,
 				B9BFF7B31B9BD50F0005951F /* TasksList.swift */,
+				B9B879451BA3879F00B2CEE0 /* TabBarViewController.swift */,
+				B93A1AA71BA81417008E6DE6 /* SettingViewController.swift */,
 				B931AE7D1B7FEBB7004435D5 /* Images.xcassets */,
 				B931AE7F1B7FEBB7004435D5 /* LaunchScreen.xib */,
 				B931AE741B7FEBB7004435D5 /* Supporting Files */,
@@ -221,7 +227,9 @@
 				B9BFF7B41B9BD50F0005951F /* TasksList.swift in Sources */,
 				B931AE791B7FEBB7004435D5 /* PomodoroViewController.swift in Sources */,
 				B931AE771B7FEBB7004435D5 /* AppDelegate.swift in Sources */,
+				B9B879461BA3879F00B2CEE0 /* TabBarViewController.swift in Sources */,
 				B9B2397B1B9D020000F8B2DD /* TasksViewController.swift in Sources */,
+				B93A1AA81BA81417008E6DE6 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="260" id="Ur9-tN-eOW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOP-F8-Kk3">
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-621" y="1279"/>
+            <point key="canvasLocation" x="401" y="564"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="n5G-i9-zQN">
@@ -116,12 +116,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Goz-lm-7Xg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="1279"/>
+            <point key="canvasLocation" x="-318" y="1327"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Setting-->
+        <scene sceneID="r0a-e9-CX7">
+            <objects>
+                <viewController id="5MT-wn-wCq" customClass="SettingViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGO-Yh-MVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="nea-x6-aa7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xLP-Mj-GTK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your pomodoro time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dI-aS-RMe">
+                                <rect key="frame" x="189" y="33" width="222" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="90S-Sn-xtO"/>
+                                    <constraint firstAttribute="width" constant="222" id="CER-3B-X3g"/>
+                                    <constraint firstAttribute="height" constant="22" id="eXo-wg-b4J"/>
+                                    <constraint firstAttribute="width" constant="222" id="y0e-cv-P0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eXo-wg-b4J"/>
+                                        <exclude reference="y0e-cv-P0f"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your break time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1R-26-RzJ">
+                                <rect key="frame" x="208" y="233" width="185" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="fPY-Jn-572"/>
+                                    <constraint firstAttribute="width" constant="185" id="swq-jo-VN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-Hd-brq">
+                                <rect key="frame" x="0.0" y="63" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5MT-wn-wCq" id="AVJ-Ws-Tcx"/>
+                                    <outlet property="delegate" destination="5MT-wn-wCq" id="7ud-hb-mr3"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-Yj-KxW">
+                                <rect key="frame" x="0.0" y="263" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5MT-wn-wCq" id="H84-P2-ltq"/>
+                                    <outlet property="delegate" destination="5MT-wn-wCq" id="3XX-83-ojp"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5dI-aS-RMe" secondAttribute="centerX" id="3OT-od-Fqd"/>
+                            <constraint firstItem="sl6-Hd-brq" firstAttribute="leading" secondItem="xLP-Mj-GTK" secondAttribute="leading" id="5FD-xF-sDW"/>
+                            <constraint firstAttribute="centerX" secondItem="F1R-26-RzJ" secondAttribute="centerX" id="5Pt-U1-eSe"/>
+                            <constraint firstAttribute="centerX" secondItem="5dI-aS-RMe" secondAttribute="centerX" id="9bL-3c-94K"/>
+                            <constraint firstItem="NVq-Yj-KxW" firstAttribute="top" secondItem="F1R-26-RzJ" secondAttribute="bottom" constant="8" id="9nq-d7-gQF"/>
+                            <constraint firstItem="5dI-aS-RMe" firstAttribute="top" secondItem="hGO-Yh-MVa" secondAttribute="bottom" constant="13" id="SBq-ce-8ge"/>
+                            <constraint firstAttribute="trailing" secondItem="sl6-Hd-brq" secondAttribute="trailing" id="XFd-lY-KQE"/>
+                            <constraint firstItem="5dI-aS-RMe" firstAttribute="top" secondItem="hGO-Yh-MVa" secondAttribute="bottom" constant="13" id="b37-dZ-4pL"/>
+                            <constraint firstAttribute="trailing" secondItem="NVq-Yj-KxW" secondAttribute="trailing" id="cft-Is-uVT"/>
+                            <constraint firstItem="sl6-Hd-brq" firstAttribute="top" secondItem="5dI-aS-RMe" secondAttribute="bottom" constant="8" id="f1c-iA-Cog"/>
+                            <constraint firstItem="NVq-Yj-KxW" firstAttribute="leading" secondItem="xLP-Mj-GTK" secondAttribute="leading" id="jlM-OS-Vgo"/>
+                            <constraint firstItem="F1R-26-RzJ" firstAttribute="top" secondItem="sl6-Hd-brq" secondAttribute="bottom" constant="8" id="qbR-Ao-9E0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3OT-od-Fqd"/>
+                                <exclude reference="SBq-ce-8ge"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="NyE-Og-s7l"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="breakPicker" destination="NVq-Yj-KxW" id="Nq9-GF-0sB"/>
+                        <outlet property="pomodoroPicker" destination="sl6-Hd-brq" id="gDG-VZ-EA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQu-GV-NI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="1327"/>
+        </scene>
+        <!--Tab Bar View Controller-->
         <scene sceneID="Rfh-Xw-9ig">
             <objects>
-                <tabBarController id="aFe-iF-Xks" sceneMemberID="viewController">
+                <tabBarController id="aFe-iF-Xks" customClass="TabBarViewController" customModule="Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ix7-nr-AZw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -131,6 +219,7 @@
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="7ZP-cY-fFj"/>
                         <segue destination="pmv-v9-CYn" kind="relationship" relationship="viewControllers" id="H3f-L8-sxg"/>
+                        <segue destination="5MT-wn-wCq" kind="relationship" relationship="viewControllers" id="PYU-bS-tmq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie0-jV-gBM" userLabel="First Responder" sceneMemberID="firstResponder"/>

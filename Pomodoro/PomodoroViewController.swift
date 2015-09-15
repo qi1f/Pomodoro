@@ -113,9 +113,9 @@ class PomodoroViewController: UIViewController {
     func setBackgroundColor() {
         if takeABreak {
             // Set break background color
-            let backgroundRed: CGFloat = 135 / 255
-            let backgroundGreen: CGFloat = 211 / 255
-            let backgroundBlue: CGFloat = 124 / 255
+            let backgroundRed: CGFloat = 200 / 255
+            let backgroundGreen: CGFloat = 247 / 255
+            let backgroundBlue: CGFloat = 197 / 255
             self.view.backgroundColor = UIColor(red: backgroundRed, green: backgroundGreen, blue: backgroundBlue, alpha: 1.0)
         } else {
             // Set pomodoro background color

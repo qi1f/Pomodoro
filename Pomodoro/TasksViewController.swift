@@ -24,9 +24,9 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         // Set background color
-        let backgroundRed: CGFloat = 135 / 255
-        let backgroundGreen: CGFloat = 211 / 255
-        let backgroundBlue: CGFloat = 124 / 255
+        let backgroundRed: CGFloat = 200 / 255
+        let backgroundGreen: CGFloat = 247 / 255
+        let backgroundBlue: CGFloat = 197 / 255
         taskViewTableView.backgroundColor = UIColor(red: backgroundRed, green: backgroundGreen, blue: backgroundBlue, alpha: 1.0)
         self.view.backgroundColor = UIColor(red: backgroundRed, green: backgroundGreen, blue: backgroundBlue, alpha: 1.0)
         
@@ -65,9 +65,9 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         let taskCell = tableView.dequeueReusableCellWithIdentifier("taskCell", forIndexPath: indexPath) as! UITableViewCell
         
-        let backgroundRed: CGFloat = 135 / 255
-        let backgroundGreen: CGFloat = 211 / 255
-        let backgroundBlue: CGFloat = 124 / 255
+        let backgroundRed: CGFloat = 200 / 255
+        let backgroundGreen: CGFloat = 247 / 255
+        let backgroundBlue: CGFloat = 197 / 255
         taskCell.backgroundColor = UIColor(red: backgroundRed, green: backgroundGreen, blue: backgroundBlue, alpha: 1.0)
 
         switch taskViewSegmentedControlOutlet.selectedSegmentIndex {
